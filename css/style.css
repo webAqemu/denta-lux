@@ -1,7 +1,13 @@
 @font-face {
   font-family: "Microsoft-JhengHei-400";
-  src: url("../fonts/microsoft-jheng-hei-400.ttf") format("ttf");
+  src: url("../fonts/microsoft-jhenghei-regular.ttf") format("ttf");
   font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Microsoft-JhengHei-700";
+  src: url("../fonts/microsoft-jhenghei-bold.ttf") format("ttf");
+  font-weight: 700;
   font-display: swap; }
 
 html {
@@ -13,16 +19,28 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: "Microsoft-JhengHei-400", serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft-JhengHei-400", sans-serif;
   font-weight: 400;
   color: #353535;
   font-size: 18px;
-  line-height: 1.3; }
+  line-height: 1.3;
+  overflow-x: hidden; }
 
 .container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px; }
+
+.btn {
+  display: inline-block;
+  color: white;
+  padding: 20px 75px;
+  background-color: #ef3742;
+  border-radius: 50px;
+  border: 1px solid #ef3742;
+  text-decoration: none; }
 
 .header__inner {
   height: 115px;
@@ -69,11 +87,12 @@ body {
   .header .menu__item--list:hover .header__hover {
     opacity: 1; }
 
-.header__icon {
+.header__search {
   width: 20px;
-  height: 20px; }
-  .header__icon path {
-    fill: #ef3742; }
+  height: 20px;
+  background-image: url(../img/icons/search.svg);
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .logo {
   display: flex;
@@ -104,3 +123,84 @@ body {
     color: #353535;
     padding: 10px 0;
     transition: all 0.3s; }
+
+.preview {
+  background-image: url(../img/index-main.png);
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  background-position: calc(100% - 150px) top;
+  padding: 150px 150px 300px;
+  margin: 0 -150px 0;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+  background-color: #d2e0eb;
+  overflow: hidden; }
+  .preview__inner {
+    max-width: 780px;
+    width: 100%;
+    position: relative;
+    z-index: 2; }
+    .preview__inner::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: 0;
+      height: 1000px;
+      width: 150%;
+      background: linear-gradient(90deg, #d2e0eb 40%, transparent 70%);
+      z-index: -1; }
+  .preview__title {
+    font-family: "Microsoft-JhengHei-700", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 50px; }
+  .preview__text {
+    margin-bottom: 30px;
+    font-size: 30px;
+    max-width: 400px;
+    width: 100%; }
+  .preview__btn {
+    font-size: 23px; }
+
+/* .preview__inner::before {
+  content: "";
+  position: absolute;
+  top: -300%;
+  left: 208px;
+  height: 2000px;
+  width: 150%;
+  background: linear-gradient(
+90deg
+, #d2e0eb 50%, transparent 70%);
+  z-index: -1;
+  transform: rotate(
+50deg
+);
+} */
+.advantages {
+  margin-bottom: 200px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10; }
+  .advantages__inner {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1090px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 35px 30px;
+    box-shadow: 0px 11px 29px rgba(0, 0, 0, 0.12);
+    border-radius: 10px; }
+  .advantages__img {
+    height: 50px;
+    width: auto; }
+  .advantages__item {
+    display: flex;
+    align-items: flex-start; }
+  .advantages__text {
+    display: inline-block;
+    max-width: 165px;
+    width: 100%;
+    margin-left: 15px; }

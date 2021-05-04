@@ -1,6 +1,12 @@
 @font-face {
   font-family: "Microsoft-JhengHei-400";
-  src: url("../fonts/microsoft-jheng-hei-400.ttf") format("ttf");
+  src: url("../fonts/microsoft-jhenghei-regular.ttf") format("ttf");
   font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Microsoft-JhengHei-700";
+  src: url("../fonts/microsoft-jhenghei-bold.ttf") format("ttf");
+  font-weight: 700;
   font-display: swap;
 }
