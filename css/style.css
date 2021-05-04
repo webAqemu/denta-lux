@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Microsoft-JhengHei-400";
+  src: url("../fonts/microsoft-jheng-hei-400.ttf") format("ttf");
+  font-weight: 400;
+  font-display: swap; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Microsoft-JhengHei-400", serif;
+  font-weight: 400;
+  color: #353535;
+  font-size: 18px;
+  line-height: 1.3; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.header__inner {
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.header__nav {
+  max-width: 670px;
+  width: 100%;
+  margin-right: 15px; }
+
+.header .menu__link:hover {
+  color: #ef3742; }
+
+.header__hover {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: opacity 0.3s; }
+  .header__hover-icon {
+    transition: all 0.3s; }
+  .header__hover-item + .header__hover-item {
+    margin-top: 10px; }
+  .header__hover-link {
+    display: inline-block;
+    color: #353535;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: all 0.3s; }
+    .header__hover-link:hover {
+      color: #ef3742; }
+
+.header .menu__item--list:hover {
+  overflow: visible; }
+  .header .menu__item--list:hover svg {
+    transform: rotate(180deg);
+    stroke: #ef3742; }
+  .header .menu__item--list:hover .header__hover {
+    opacity: 1; }
+
+.header__icon {
+  width: 20px;
+  height: 20px; }
+  .header__icon path {
+    fill: #ef3742; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  text-decoration: none; }
+  .logo__text {
+    width: 130px;
+    margin-left: 20px;
+    color: #353535; }
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .menu__item {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; }
+  .menu__link {
+    display: inline-block;
+    text-decoration: none;
+    color: #353535;
+    padding: 10px 0;
+    transition: all 0.3s; }
