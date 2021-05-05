@@ -61,6 +61,7 @@ body {
   border: 1px solid $red;
   text-decoration: none;
   transition: all 0.3s;
+
   &:hover {
     background-color: white;
     color: $red;
@@ -92,6 +93,7 @@ body {
 .underline {
   position: relative;
   padding-bottom: 30px;
+
   &::before {
     content: "";
     position: absolute;
@@ -106,6 +108,7 @@ body {
 @media (max-width: 1200px) {
   .underline {
     padding-bottom: 15px;
+
     &::before {
       height: 4px;
     }
@@ -122,9 +125,11 @@ body {
   max-width: 265px;
   width: 100%;
   background-color: white;
+
   &__img {
     height: 286px;
   }
+
   &__desc {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -132,15 +137,18 @@ body {
     border: 1px solid $grey;
     border-top: none;
   }
+
   &__name {
     width: 100%;
     margin: 0 0 20px 0;
     padding-bottom: 10px;
     font-size: 20px;
+
     &::before {
       height: 3px;
     }
   }
+
   &__link {
     display: inline-block;
     margin-top: 25px;
@@ -157,6 +165,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
   &__line {
     display: inline-block;
     width: 100%;
@@ -164,6 +173,7 @@ body {
     background-color: $red;
     transition: all 0.3s;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -174,6 +184,7 @@ body {
     background-color: $red;
     transition: all 0.3s;
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -184,13 +195,16 @@ body {
     background-color: $red;
     transition: all 0.3s;
   }
+
   &.active &__line {
     opacity: 0;
   }
+
   &.active::after {
     transform: rotate(45deg);
     top: 9px;
   }
+
   &.active::before {
     transform: rotate(-45deg);
     bottom: 9px;
@@ -199,6 +213,7 @@ body {
 
 .header {
   position: relative;
+
   &__inner {
     height: 115px;
     display: flex;
@@ -207,14 +222,17 @@ body {
     max-width: 100%;
     width: 100%;
   }
+
   &__nav {
     max-width: 670px;
     width: 100%;
     margin-right: 15px;
   }
+
   & .menu__link:hover {
     color: $red;
   }
+
   &__hover {
     background-color: #fff;
     padding: 5px;
@@ -229,6 +247,7 @@ body {
     margin: 0;
     list-style: none;
     transition: opacity 0.3s;
+
     &-icon {
       transition: all 0.3s;
     }
@@ -244,6 +263,7 @@ body {
       text-decoration: none;
       padding: 5px 0;
       transition: all 0.3s;
+
       &:hover {
         color: $red;
       }
@@ -252,6 +272,7 @@ body {
 
   & .menu__item--list:hover {
     overflow: visible;
+
     & svg {
       transform: rotate(180deg);
       stroke: $red;
@@ -292,12 +313,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   &__item {
     position: relative;
     padding: 0;
     margin: 0;
     overflow: hidden;
   }
+
   &__link {
     display: inline-block;
     text-decoration: none;
@@ -312,6 +335,7 @@ body {
     &__inner {
       height: 90px;
     }
+
     &__nav {
       position: absolute;
       top: 90px;
@@ -324,19 +348,24 @@ body {
       margin-right: 0;
       transition: all 0.3s;
       transform: translateX(100%);
+
       &.active {
         transform: translateX(0);
       }
     }
+
     .menu {
       flex-direction: column;
+
       &__item {
         width: 100%;
+
         &--list {
           display: flex;
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
+
           & .menu__link {
             width: fit-content;
             margin-right: 10px;
@@ -344,43 +373,54 @@ body {
           }
         }
       }
+
       &__link {
         width: 100%;
         text-align: center;
+
         &:hover {
           color: $text;
         }
       }
     }
+
     &__hover-link {
       text-align: center;
+
       &:hover {
         color: $text;
       }
     }
+
     &__search {
       margin-left: auto;
       margin-right: 20px;
     }
+
     &__hover {
       position: relative;
       opacity: 1;
       height: 0;
       box-shadow: none;
       transition: all 0.3s;
+
       &.active {
         height: 120px;
       }
     }
+
     &__hover-icon {
       margin-top: 10px;
     }
+
     &__hover-icon.active {
       transform: rotate(180deg) !important;
       stroke: $red !important;
     }
+
     & .menu__item--list:hover {
       overflow: hidden;
+
       & svg {
         transform: rotate(0deg);
         stroke: $text;
@@ -391,9 +431,11 @@ body {
       }
     }
   }
+
   .burger {
     display: flex;
   }
+
   .logo {
     &__img {
       width: 100px;
@@ -417,11 +459,13 @@ body {
   border-bottom-right-radius: 35%;
   background-color: #d2e0eb;
   overflow: hidden;
+
   &__inner {
     max-width: 780px;
     width: 100%;
     position: relative;
     z-index: 2;
+
     &::before {
       content: "";
       position: absolute;
@@ -433,15 +477,18 @@ body {
       z-index: -1;
     }
   }
+
   &__title {
     margin-bottom: 50px;
   }
+
   &__text {
     margin-bottom: 30px;
     font-size: 30px;
     max-width: 400px;
     width: 100%;
   }
+
   &__btn {
     font-size: 23px;
   }
@@ -451,6 +498,7 @@ body {
     background-size: auto 120%;
     background-position: calc(100% - 120px) top;
     padding: 150px 150px 200px;
+
     &__inner {
       &::before {
         top: -150px;
@@ -460,12 +508,15 @@ body {
         background: linear-gradient(90deg, #d2e0eb 35%, transparent 70%);
       }
     }
+
     &__title {
       margin-bottom: 30px;
     }
+
     &__text {
       font-size: 18px;
     }
+
     &__btn {
       font-size: 16px;
     }
@@ -475,8 +526,10 @@ body {
   .preview {
     background-position: center;
     padding: 150px 150px 200px;
+
     &__inner {
       max-width: 100%;
+
       &::before {
         top: -150px;
         left: -20px;
@@ -494,6 +547,7 @@ body {
   margin-top: -80px;
   position: relative;
   z-index: 10;
+
   &__inner {
     background-color: #ffffff;
     display: flex;
@@ -506,14 +560,17 @@ body {
     box-shadow: 0px 11px 29px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
   }
+
   &__img {
     height: 50px;
     width: auto;
   }
+
   &__item {
     display: flex;
     align-items: flex-start;
   }
+
   &__text {
     display: inline-block;
     max-width: 165px;
@@ -524,6 +581,7 @@ body {
 @media (max-width: 1200px) {
   .advantages {
     margin-bottom: 50px;
+
     &__inner {
       flex-wrap: wrap;
       justify-content: center;
@@ -531,10 +589,12 @@ body {
       width: calc(100% + 20px);
       padding: 20px;
     }
+
     &__img {
       height: 50px;
       width: auto;
     }
+
     &__item {
       display: flex;
       align-items: flex-start;
@@ -542,6 +602,7 @@ body {
       width: 100%;
       margin: 10px;
     }
+
     &__text {
       display: inline-block;
       max-width: 165px;
@@ -553,18 +614,22 @@ body {
 
 .services {
   margin-bottom: 50px;
+
   &__title {
     text-align: center;
+
     &::before {
       left: calc(50% - 62.5px);
     }
   }
+
   &__inner {
     margin: 0 -20px 30px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   &__item {
     margin: 0 20px 30px;
     padding: 30px;
@@ -576,21 +641,26 @@ body {
     justify-content: center;
     text-align: center;
   }
+
   &__img {
     margin-bottom: 30px;
     transition: all 0.3s;
   }
+
   &__img:hover {
     transform: scale(1.2);
   }
+
   &__item:nth-child(1) &__img {
     margin-right: -17px;
   }
+
   &__text {
     margin: 20px 0;
     max-width: 160px;
     width: 100%;
   }
+
   &__btn {
     padding: 10px 50px;
   }
@@ -598,11 +668,13 @@ body {
 
 .short-about {
   margin-bottom: 130px;
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: start;
   }
+
   &__img {
     max-width: 50%;
     width: 100%;
@@ -614,15 +686,18 @@ body {
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+
     & img {
       width: 100%;
       height: 100%;
     }
   }
+
   &__desc {
     max-width: 500px;
     width: 100%;
     position: relative;
+
     &::after {
       content: "DentaLux";
       font-size: 100px;
@@ -650,6 +725,7 @@ body {
       max-width: 60%;
       min-width: 60%;
     }
+
     &__text {
       font-size: 18px;
       margin: 20px 0 30px;
@@ -662,10 +738,12 @@ body {
       justify-content: start;
       flex-direction: column;
     }
+
     &__img {
       max-width: 100%;
       min-width: 60%;
     }
+
     &__text {
       font-size: 18px;
       margin: 20px 0 30px;
@@ -679,15 +757,19 @@ body {
   padding-top: 50px;
   background-repeat: no-repeat;
   margin-bottom: 75px;
+
   &__title {
     text-align: center;
+
     &::before {
       left: calc(50% - 62.5px);
     }
   }
+
   &__inner {
     margin: 25px 0 30px;
   }
+
   &__arrow {
     height: 62px;
     width: 62px;
@@ -698,18 +780,22 @@ body {
     top: calc(50% - 62px);
     background-size: cover;
     cursor: pointer;
+
     &--left {
       background-image: url(../img/doctors-arrow-left.png);
       left: -62px;
     }
+
     &--right {
       background-image: url(../img/doctors-arrow-right.png);
       right: -62px;
     }
   }
+
   &__card {
     margin: 0 auto;
   }
+
   &__btn {
     display: block;
     width: fit-content;
@@ -729,6 +815,7 @@ body {
         background-image: url(../img/doctors-arrow-left.png);
         left: 10px;
       }
+
       &--right {
         background-image: url(../img/doctors-arrow-right.png);
         right: 10px;
@@ -739,14 +826,18 @@ body {
 
 .certificates {
   margin-bottom: 80px;
+
   &__title {
     text-align: center;
+
     &::before {
       left: calc(50% - 62.5px);
     }
   }
+
   &__inner {
     position: relative;
+
     &::after {
       content: "DentaLux";
       font-size: 100px;
@@ -757,6 +848,7 @@ body {
       transform: rotate(90deg);
     }
   }
+
   &__img {
     max-width: 265px;
     width: 100%;
@@ -772,10 +864,12 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px -15px 30px;
+
     li {
       position: relative;
       margin: 0 15px 10px;
     }
+
     li button {
       width: 20px;
       height: 20px;
@@ -786,6 +880,7 @@ body {
       cursor: pointer;
       padding: 0;
       transition: all 0.3s;
+
       &::before {
         content: "";
         height: 40px;
@@ -799,9 +894,11 @@ body {
         transition: all 0.3s;
       }
     }
+
     .slick-active button,
     button:hover {
       background-color: $red;
+
       &::before {
         opacity: 0.3;
       }
@@ -817,6 +914,7 @@ body {
 .qr {
   margin-bottom: 80px;
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -827,30 +925,36 @@ body {
     top: 50px;
     right: -200px;
   }
+
   &__title {
     text-align: center;
     margin-bottom: 50px;
+
     &::before {
       left: calc(50% - 62.5px);
     }
   }
+
   &__inner {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 60px;
   }
+
   &__img {
     max-width: 270px;
     width: 100%;
     border: 1px solid $grey;
     border-radius: 10px;
   }
+
   &__text {
     margin-top: 40px;
     font-size: 24px;
@@ -867,6 +971,7 @@ body {
     &__item {
       margin: 0 30px;
     }
+
     &__text {
       font-size: 18px;
       margin-top: 20px;
@@ -878,6 +983,7 @@ body {
     &__inner {
       flex-direction: column;
     }
+
     &__item {
       margin: 0 0 15px;
     }
@@ -886,22 +992,27 @@ body {
 
 .footer {
   background-color: $red;
+
   &__inner {
     padding: 15px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .logo__text {
     color: white;
   }
+
   &__nav {
     max-width: 475px;
     width: 100%;
   }
+
   .menu__link {
     color: white;
   }
+
   .qr__item {
     color: white;
     margin: 0;
@@ -932,10 +1043,12 @@ body {
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .logo {
       order: -2;
       margin-bottom: 10px;
     }
+
     .qr__inner {
       flex-direction: row !important;
       order: -1;
