@@ -46,12 +46,6 @@ body {
   padding: 0 15px;
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding: 0 10px;
-  }
-}
-
 .btn {
   display: inline-block;
   color: white;
@@ -333,12 +327,12 @@ body {
 @media (max-width: 1200px) {
   .header {
     &__inner {
-      height: 90px;
+      height: 70px;
     }
 
     &__nav {
       position: absolute;
-      top: 90px;
+      top: 70px;
       right: 0;
       z-index: 10;
       width: 245px;
@@ -442,6 +436,7 @@ body {
     }
   }
 }
+
 @media (max-width: 500px) {
   .logo__text {
     display: none;
@@ -449,33 +444,16 @@ body {
 }
 
 .preview {
-  background-image: url(../img/index-main.png);
+  background-image: url(../img/index-main-1.png);
   background-repeat: no-repeat;
-  background-size: auto 125%;
-  background-position: calc(100% - 150px) top;
-  padding: 150px 150px 300px;
-  margin: 0 -150px 0;
-  border-bottom-left-radius: 35%;
-  border-bottom-right-radius: 35%;
-  background-color: #d2e0eb;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px 300px;
   overflow: hidden;
 
   &__inner {
     max-width: 780px;
     width: 100%;
-    position: relative;
-    z-index: 2;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -100%;
-      left: -200px;
-      height: 1000px;
-      width: 200%;
-      background: linear-gradient(90deg, #d2e0eb 40%, transparent 70%);
-      z-index: -1;
-    }
   }
 
   &__title {
@@ -493,21 +471,10 @@ body {
     font-size: 23px;
   }
 }
+
 @media (max-width: 1200px) {
   .preview {
-    background-size: auto 120%;
-    background-position: calc(100% - 120px) top;
-    padding: 150px 150px 200px;
-
-    &__inner {
-      &::before {
-        top: -150px;
-        left: -20px;
-        height: 800px;
-        width: 100%;
-        background: linear-gradient(90deg, #d2e0eb 35%, transparent 70%);
-      }
-    }
+    padding: 150px 0px 200px;
 
     &__title {
       margin-bottom: 30px;
@@ -522,22 +489,12 @@ body {
     }
   }
 }
+
 @media (max-width: 900px) {
   .preview {
-    background-position: center;
-    padding: 150px 150px 200px;
-
+    padding: 100px 0;
     &__inner {
       max-width: 100%;
-
-      &::before {
-        top: -150px;
-        left: -20px;
-        height: 800px;
-        width: calc(100% + 40px);
-        background: #d2e0eb;
-        opacity: 0.6;
-      }
     }
   }
 }
@@ -578,6 +535,7 @@ body {
     margin-left: 15px;
   }
 }
+
 @media (max-width: 1200px) {
   .advantages {
     margin-bottom: 50px;
@@ -585,8 +543,8 @@ body {
     &__inner {
       flex-wrap: wrap;
       justify-content: center;
-      margin: 0 -10px;
-      width: calc(100% + 20px);
+      margin: 0 10px;
+      width: calc(100% - 20px);
       padding: 20px;
     }
 
@@ -675,7 +633,7 @@ body {
     align-items: start;
   }
 
-  &__img {
+  &__video {
     max-width: 50%;
     width: 100%;
     height: fit-content;
@@ -686,10 +644,67 @@ body {
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+    position: relative;
 
-    & img {
+    & video {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 1;
+    transition: all 0.3s;
+
+    &-icon {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      background-image: url(../img/icons/play.svg);
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 40px;
+      width: 40px;
+      background-color: $red;
+      border-radius: 100%;
+      z-index: 3;
+    }
+    &-circle-1 {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      height: 70px;
+      width: 70px;
+      background-color: $red;
+      border-radius: 100%;
+      opacity: 0.5;
+      z-index: 2;
+    }
+    &-circle-2 {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      height: 100px;
+      width: 100px;
+      background-color: $red;
+      border-radius: 100%;
+      opacity: 0.2;
+      z-index: 2;
+    }
+    &.active {
+      opacity: 0;
     }
   }
 
@@ -718,9 +733,10 @@ body {
     padding: 15px 60px;
   }
 }
+
 @media (max-width: 1200px) {
   .short-about {
-    &__img {
+    &__video {
       box-shadow: none;
       max-width: 60%;
       min-width: 60%;
@@ -732,6 +748,7 @@ body {
     }
   }
 }
+
 @media (max-width: 700px) {
   .short-about {
     &__inner {
@@ -739,7 +756,7 @@ body {
       flex-direction: column;
     }
 
-    &__img {
+    &__video {
       max-width: 100%;
       min-width: 60%;
     }
@@ -767,7 +784,7 @@ body {
   }
 
   &__inner {
-    margin: 25px 0 30px;
+    margin: 25px 0 50px;
   }
 
   &__arrow {
@@ -783,12 +800,12 @@ body {
 
     &--left {
       background-image: url(../img/doctors-arrow-left.png);
-      left: -62px;
+      left: -82px;
     }
 
     &--right {
       background-image: url(../img/doctors-arrow-right.png);
-      right: -62px;
+      right: -82px;
     }
   }
 
@@ -863,7 +880,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 10px -15px 30px;
+    margin: 30px -15px 30px;
 
     li {
       position: relative;
@@ -905,6 +922,7 @@ body {
     }
   }
 }
+
 @media (max-width: 1200px) {
   .certificates__inner::after {
     display: none;
@@ -966,6 +984,7 @@ body {
     display: none;
   }
 }
+
 @media (max-width: 900px) {
   .qr {
     &__item {
@@ -978,6 +997,7 @@ body {
     }
   }
 }
+
 @media (max-width: 500px) {
   .qr {
     &__inner {
@@ -1037,6 +1057,7 @@ body {
     font-size: 14px;
   }
 }
+
 @media (max-width: 1000px) {
   .footer {
     &__inner {

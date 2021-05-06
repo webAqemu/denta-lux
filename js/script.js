@@ -76,3 +76,23 @@ headerList.addEventListener("click", function () {
   document.querySelector(".header__hover").classList.toggle("active");
   document.querySelector(".header__hover-icon").classList.toggle("active");
 });
+
+// video play in short-about section
+const playBtn = document.querySelector(".short-about__play");
+const vid = document.getElementById("video");
+
+if (playBtn.addEventListener) {
+  playBtn.addEventListener("click", play, false);
+} else if (playBtn.attachEvent) {
+  playBtn.attachEvent("onclick", play);
+}
+
+function play() {
+  if (vid.paused) {
+    vid.play();
+    playBtn.classList.toggle("active");
+  } else {
+    vid.pause();
+    playBtn.classList.toggle("active");
+  }
+}
