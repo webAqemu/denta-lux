@@ -78,21 +78,38 @@ headerList.addEventListener("click", function () {
 });
 
 // video play in short-about section
-const playBtn = document.querySelector(".short-about__play");
-const vid = document.getElementById("video");
+if (document.querySelector(".short-about__play")) {
+  const playBtn = document.querySelector(".short-about__play");
+  const vid = document.getElementById("video");
 
-if (playBtn.addEventListener) {
-  playBtn.addEventListener("click", play, false);
-} else if (playBtn.attachEvent) {
-  playBtn.attachEvent("onclick", play);
-}
+  if (playBtn.addEventListener) {
+    playBtn.addEventListener("click", play, false);
+  } else if (playBtn.attachEvent) {
+    playBtn.attachEvent("onclick", play);
+  }
 
-function play() {
-  if (vid.paused) {
-    vid.play();
-    playBtn.classList.toggle("active");
-  } else {
-    vid.pause();
-    playBtn.classList.toggle("active");
+  function play() {
+    if (vid.paused) {
+      vid.play();
+      playBtn.classList.toggle("active");
+    } else {
+      vid.pause();
+      playBtn.classList.toggle("active");
+    }
   }
 }
+// tabs on about.html
+const tabsBtnsContainer = document.querySelector(".about__tabs-inner");
+const tabsBtns = document.querySelectorAll(".about__tab");
+const tabsContent = document.querySelectorAll(".about__content");
+console.log(tabsBtns);
+console.log(tabsContent);
+
+tabsBtnsContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("about__tab")) {
+    tabsBtns.forEach((btn) => btn.classList.remove("active"));
+    e.target.classList.add("active");
+    tabsContent.forEach((content) => content.classList.remove("active"));
+    document.querySelector(`.about__content--${e.target.dataset.tab}`).classList.add("active");
+  }
+});

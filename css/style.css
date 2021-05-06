@@ -756,3 +756,188 @@ body {
   .footer .qr__inner {
     flex-direction: row !important;
     order: -1; } }
+
+.about__preview {
+  background-image: url(../img/about-1.png);
+  padding: 150px 0;
+  margin-bottom: 45px; }
+
+.about__tabs-inner {
+  width: calc(100% + 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -15px 70px; }
+
+.about__tab {
+  margin: 0 15px;
+  min-width: 175px;
+  text-align: center;
+  border: 1px solid #d2e0eb;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .about__tab.active, .about__tab:hover {
+    background-color: #ef3742;
+    color: white; }
+
+.about__title {
+  text-align: center; }
+  .about__title::before {
+    left: calc(50% - 62.5px); }
+
+.about__content {
+  display: none; }
+  .about__content.active {
+    display: block; }
+
+.about__stats {
+  margin: 0 0 70px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%; }
+  .about__stats-num {
+    font-size: 72px;
+    color: #ef3742;
+    margin-bottom: 30px; }
+  .about__stats-text {
+    flex: 24;
+    max-width: 180px;
+    width: 100%; }
+
+.about__history {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .about__history-item:nth-child(2n) .about__history-wrapper {
+    flex-direction: row-reverse; }
+  .about__history-item:nth-child(2n) .about__history-desc {
+    margin-right: 0;
+    margin-left: 10px; }
+    .about__history-item:nth-child(2n) .about__history-desc::after {
+      left: -60px; }
+  .about__history-item:nth-child(2n) .about__history-img {
+    margin-left: 0;
+    margin-right: 10px; }
+  .about__history-item:last-child .about__history-desc::after {
+    background: #d2e0eb;
+    background: linear-gradient(180deg, #d2e0eb 70%, transparent 100%); }
+  .about__history-year {
+    display: block;
+    border: 2px solid #d2e0eb;
+    background-color: #ef3742;
+    color: white;
+    font-size: 24px;
+    min-width: 210px;
+    max-width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px; }
+  .about__history-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0 35px; }
+  .about__history-desc {
+    padding: 30px;
+    border: 2px solid #d2e0eb;
+    max-width: 45%;
+    width: 100%;
+    margin-right: 10px;
+    font-size: 20px;
+    position: relative; }
+    .about__history-desc::after {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      min-height: calc(100% + 60px);
+      background-color: #d2e0eb;
+      position: absolute;
+      top: -22px;
+      right: -60px; }
+  .about__history-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 45%;
+    width: 100%;
+    margin-left: 10px; }
+
+.about__doctors-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: calc(100% + 20px); }
+
+.about__doctors-card {
+  margin: 0 10px 30px;
+  transition: all 0.3s; }
+  .about__doctors-card:hover {
+    box-shadow: 0 4px 8px #d2e0eb; }
+
+.about__cases-subtitle {
+  font-size: 24px;
+  margin: 20px 0 50px;
+  text-align: center; }
+
+.about__cases-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: calc(100% + 60px);
+  margin: 0 -30px; }
+
+.about__cases-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 540px;
+  width: 100%;
+  margin: 0 30px 45px; }
+
+.about__cases-title {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px; }
+  .about__cases-title::before {
+    width: 135px;
+    height: 4px;
+    left: calc(50% - 67.5px); }
+
+.about__cases-photos {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 0 -10px;
+  width: calc(100% + 20px); }
+
+.about__cases-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  max-width: 255px;
+  margin: 0 10px; }
+
+.about__cases-img {
+  width: 100%;
+  border-radius: 10px; }
+
+.about__cases-desc {
+  margin-top: 15px;
+  font-size: 24px; }
+
+.about__cases-text {
+  margin-top: 15px;
+  font-size: 16px;
+  text-align: center; }

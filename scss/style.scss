@@ -5,6 +5,7 @@ $red: #ef3742;
 $dark-red: #df2d38;
 $grey: #dadada;
 $grey-shadow: #bfbfbf;
+$light-blue: #d2e0eb;
 
 html {
   box-sizing: border-box;
@@ -1073,6 +1074,222 @@ body {
     .qr__inner {
       flex-direction: row !important;
       order: -1;
+    }
+  }
+}
+
+// ABOUT.HTML
+
+.about {
+  &__preview {
+    background-image: url(../img/about-1.png);
+    padding: 150px 0;
+    margin-bottom: 45px;
+  }
+  &__tabs {
+    &-inner {
+      width: calc(100% + 30px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 -15px 70px;
+    }
+  }
+  &__tab {
+    margin: 0 15px;
+    min-width: 175px;
+    text-align: center;
+    border: 1px solid $light-blue;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &.active,
+    &:hover {
+      background-color: $red;
+      color: white;
+    }
+  }
+  &__title {
+    text-align: center;
+    &::before {
+      left: calc(50% - 62.5px);
+    }
+  }
+  &__content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__stats {
+    margin: 0 0 70px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    &-num {
+      font-size: 72px;
+      color: $red;
+      margin-bottom: 30px;
+    }
+    &-text {
+      flex: 24;
+      max-width: 180px;
+      width: 100%;
+    }
+  }
+  &__history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &-item:nth-child(2n) {
+      & .about__history-wrapper {
+        flex-direction: row-reverse;
+      }
+      & .about__history-desc {
+        margin-right: 0;
+        margin-left: 10px;
+        &::after {
+          left: -60px;
+        }
+      }
+      & .about__history-img {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+    &-item:last-child &-desc::after {
+      background: rgb(210, 224, 235);
+      background: linear-gradient(180deg, rgba(210, 224, 235, 1) 70%, transparent 100%);
+    }
+    &-year {
+      display: block;
+      border: 2px solid $light-blue;
+      background-color: $red;
+      color: white;
+      font-size: 24px;
+      min-width: 210px;
+      max-width: fit-content;
+      text-align: center;
+      margin: 0 auto;
+      padding: 5px;
+    }
+    &-wrapper {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      max-width: 100%;
+      width: 100%;
+      margin: 20px 0 35px;
+    }
+    &-desc {
+      padding: 30px;
+      border: 2px solid $light-blue;
+      max-width: 45%;
+      width: 100%;
+      margin-right: 10px;
+      font-size: 20px;
+      position: relative;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        min-height: calc(100% + 60px);
+        background-color: $light-blue;
+        position: absolute;
+        top: -22px;
+        right: -60px;
+      }
+    }
+    &-img {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-width: 45%;
+      width: 100%;
+      margin-left: 10px;
+    }
+  }
+  &__doctors {
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: calc(100% + 20px);
+    }
+    &-card {
+      margin: 0 10px 30px;
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 0 4px 8px $light-blue;
+      }
+    }
+  }
+  &__cases {
+    &-subtitle {
+      font-size: 24px;
+      margin: 20px 0 50px;
+      text-align: center;
+    }
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: calc(100% + 60px);
+      margin: 0 -30px;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 540px;
+      width: 100%;
+      margin: 0 30px 45px;
+    }
+    &-title {
+      font-size: 30px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      &::before {
+        width: 135px;
+        height: 4px;
+        left: calc(50% - 67.5px);
+      }
+    }
+    &-photos {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      margin: 0 -10px;
+      width: calc(100% + 20px);
+    }
+    &-photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+      max-width: 255px;
+      margin: 0 10px;
+    }
+    &-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    &-desc {
+      margin-top: 15px;
+      font-size: 24px;
+    }
+    &-text {
+      margin-top: 15px;
+      font-size: 16px;
+      text-align: center;
     }
   }
 }
