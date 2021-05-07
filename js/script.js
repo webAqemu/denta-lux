@@ -102,14 +102,13 @@ if (document.querySelector(".short-about__play")) {
 const tabsBtnsContainer = document.querySelector(".about__tabs-inner");
 const tabsBtns = document.querySelectorAll(".about__tab");
 const tabsContent = document.querySelectorAll(".about__content");
-console.log(tabsBtns);
-console.log(tabsContent);
-
-tabsBtnsContainer.addEventListener("click", function (e) {
-  if (e.target.classList.contains("about__tab")) {
-    tabsBtns.forEach((btn) => btn.classList.remove("active"));
-    e.target.classList.add("active");
-    tabsContent.forEach((content) => content.classList.remove("active"));
-    document.querySelector(`.about__content--${e.target.dataset.tab}`).classList.add("active");
-  }
-});
+if (tabsBtnsContainer) {
+  tabsBtnsContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("about__tab")) {
+      tabsBtns.forEach((btn) => btn.classList.remove("active"));
+      e.target.classList.add("active");
+      tabsContent.forEach((content) => content.classList.remove("active"));
+      document.querySelector(`.about__content--${e.target.dataset.tab}`).classList.add("active");
+    }
+  });
+}
