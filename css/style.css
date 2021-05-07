@@ -759,6 +759,9 @@ body {
 
 .about__preview {
   background-image: url(../img/about-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 150px 0;
   margin-bottom: 45px; }
 
@@ -791,6 +794,17 @@ body {
   .about__content.active {
     display: block; }
 
+@media (max-width: 620px) {
+  .about__preview {
+    padding: 100px 0;
+    margin-bottom: 35px; }
+  .about__tabs-inner {
+    width: calc(100% + 10px);
+    margin: 0 -5px 70px; }
+  .about__tab {
+    margin: 0 5px;
+    min-width: 90px; } }
+
 .about__stats {
   margin: 0 0 70px;
   list-style: none;
@@ -805,9 +819,34 @@ body {
     color: #ef3742;
     margin-bottom: 30px; }
   .about__stats-text {
-    flex: 24;
-    max-width: 180px;
+    font-size: 24px;
+    max-width: 190px;
     width: 100%; }
+
+@media (max-width: 900px) {
+  .about__stats {
+    margin: 0 -10 70px;
+    flex-wrap: wrap;
+    max-width: calc(100% + 20px);
+    width: 100%; }
+    .about__stats-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px 20px;
+      width: calc(50% - 20px); }
+    .about__stats-text {
+      font-size: 18px; } }
+
+@media (max-width: 500px) {
+  .about__stats-item {
+    margin: 0 0 20px;
+    width: 100%; }
+  .about__stats-num {
+    font-size: 54px; }
+  .about__stats-text {
+    font-size: 16px;
+    text-align: center; } }
 
 .about__history {
   list-style: none;
@@ -819,7 +858,7 @@ body {
     margin-right: 0;
     margin-left: 10px; }
     .about__history-item:nth-child(2n) .about__history-desc::after {
-      left: -11.65%; }
+      left: -12%; }
   .about__history-item:nth-child(2n) .about__history-img {
     margin-left: 0;
     margin-right: 10px; }
@@ -860,7 +899,10 @@ body {
       background-color: #d2e0eb;
       position: absolute;
       top: -22px;
-      right: -11.65%; }
+      right: -12%; }
+  .about__history-title {
+    margin: 0;
+    font-size: 24px; }
   .about__history-img {
     background-size: cover;
     background-position: center;
@@ -869,11 +911,40 @@ body {
     width: 100%;
     margin-left: 10px; }
 
+@media (max-width: 700px) {
+  .about__history-year {
+    font-size: 18px; }
+  .about__history-desc {
+    padding: 15px;
+    font-size: 16px; } }
+
+@media (max-width: 500px) {
+  .about__history-item:nth-child(2n) .about__history-wrapper {
+    flex-direction: column-reverse; }
+  .about__history-item:nth-child(2n) .about__history-desc {
+    margin-left: 0; }
+  .about__history-item:nth-child(2n) .about__history-img {
+    margin-right: 0; }
+  .about__history-wrapper {
+    flex-direction: column-reverse; }
+  .about__history-desc {
+    max-width: 100%;
+    margin-right: 0;
+    font-size: 18px; }
+    .about__history-desc::after {
+      display: none; }
+  .about__history-img {
+    max-width: 100%;
+    margin-left: 0;
+    height: 300px;
+    margin-bottom: 15px; } }
+
 .about__doctors-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: calc(100% + 20px); }
+  width: calc(100% + 20px);
+  margin: 0 -10px; }
 
 .about__doctors-card {
   margin: 0 10px 30px;
@@ -926,7 +997,7 @@ body {
   align-items: center;
   justify-content: center;
   height: fit-content;
-  max-width: 255px;
+  max-width: calc(50% - 30px);
   margin: 0 10px; }
 
 .about__cases-img {
@@ -941,3 +1012,17 @@ body {
   margin-top: 15px;
   font-size: 16px;
   text-align: center; }
+
+@media (max-width: 500px) {
+  .about__cases-subtitle {
+    font-size: 18px; }
+  .about__cases-title {
+    font-size: 24px;
+    padding-bottom: 5px; }
+    .about__cases-title::before {
+      width: 100px;
+      height: 2px;
+      left: calc(50% - 50px); }
+  .about__cases-desc {
+    margin-top: 10px;
+    font-size: 18px; } }
