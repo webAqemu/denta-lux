@@ -212,10 +212,7 @@ body {
       opacity: 1; }
   .header__search {
     width: 20px;
-    height: 20px;
-    background-image: url(../img/icons/search.svg);
-    background-repeat: no-repeat;
-    background-size: cover; }
+    height: 20px; }
 
 .logo {
   display: flex;
@@ -472,7 +469,10 @@ body {
     cursor: pointer;
     z-index: 10;
     opacity: 1;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
     .short-about__play-icon {
       position: absolute;
       transform: translate(-50%, -50%);
@@ -819,7 +819,7 @@ body {
     margin-right: 0;
     margin-left: 10px; }
     .about__history-item:nth-child(2n) .about__history-desc::after {
-      left: -60px; }
+      left: -11.65%; }
   .about__history-item:nth-child(2n) .about__history-img {
     margin-left: 0;
     margin-right: 10px; }
@@ -860,7 +860,7 @@ body {
       background-color: #d2e0eb;
       position: absolute;
       top: -22px;
-      right: -60px; }
+      right: -11.65%; }
   .about__history-img {
     background-size: cover;
     background-position: center;

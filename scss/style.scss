@@ -281,9 +281,6 @@ body {
   &__search {
     width: 20px;
     height: 20px;
-    background-image: url(../img/icons/search.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
 
@@ -664,6 +661,9 @@ body {
     z-index: 10;
     opacity: 1;
     transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     &-icon {
       position: absolute;
@@ -1153,7 +1153,7 @@ body {
         margin-right: 0;
         margin-left: 10px;
         &::after {
-          left: -60px;
+          left: -11.65%;
         }
       }
       & .about__history-img {
@@ -1201,7 +1201,7 @@ body {
         background-color: $light-blue;
         position: absolute;
         top: -22px;
-        right: -60px;
+        right: -11.65%;
       }
     }
     &-img {
